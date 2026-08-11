@@ -1,0 +1,518 @@
+/* ========================================
+   Register Page
+======================================== */
+
+.register-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(14, 165, 233, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fafc,
+      #eef2ff
+    );
+}
+
+
+/* ========================================
+   Register Card
+======================================== */
+
+.register-card {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.10),
+    0 5px 15px rgba(15, 23, 42, 0.05);
+
+  animation: registerAppear 0.5s ease;
+}
+
+
+/* ========================================
+   Card Animation
+======================================== */
+
+@keyframes registerAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.register-header {
+  text-align: center;
+
+  margin-bottom: 28px;
+}
+
+.register-logo {
+  width: 68px;
+  height: 68px;
+
+  margin: 0 auto 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 34px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.register-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.register-header p {
+  margin: 7px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   Form Group
+======================================== */
+
+.form-group {
+  margin-bottom: 17px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   Input Box
+======================================== */
+
+.input-box {
+  width: 100%;
+
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-box:focus-within {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ========================================
+   Input
+======================================== */
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+.input-box input::placeholder {
+  color: #94a3b8;
+}
+
+.input-box input:focus {
+  outline: none;
+}
+
+
+/* ========================================
+   Password Box
+======================================== */
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 65px;
+}
+
+
+/* ========================================
+   Show / Hide Button
+======================================== */
+
+.password-toggle {
+  position: absolute;
+
+  right: 8px;
+
+  height: 34px;
+
+  padding: 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.password-toggle:hover {
+  background: #eff6ff;
+
+  color: #1d4ed8;
+}
+
+
+/* ========================================
+   Register Button
+======================================== */
+
+.register-btn {
+  width: 100%;
+
+  height: 51px;
+
+  margin-top: 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.register-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.30);
+}
+
+.register-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.register-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   Loading Spinner
+======================================== */
+
+.spinner {
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ========================================
+   Login Text
+======================================== */
+
+.login-text {
+  margin-top: 23px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.login-text a {
+  margin-left: 4px;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.login-text a:hover {
+  color: #1d4ed8;
+
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 25px 15px;
+  }
+
+  .register-card {
+    padding: 32px 28px;
+
+    border-radius: 20px;
+  }
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 480px) {
+  .register-page {
+    padding: 20px 14px;
+  }
+
+  .register-card {
+    padding: 28px 22px;
+  }
+
+  .register-logo {
+    width: 60px;
+    height: 60px;
+
+    font-size: 30px;
+  }
+
+  .register-header h1 {
+    font-size: 24px;
+  }
+
+  .register-header p {
+    font-size: 13px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .input-box {
+    height: 47px;
+  }
+
+  .register-btn {
+    height: 49px;
+  }
+}
+
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width: 360px) {
+  .register-card {
+    padding: 25px 18px;
+  }
+
+  .register-header h1 {
+    font-size: 22px;
+  }
+
+  .register-header p {
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   Back to Home Button
+======================================== */
+
+.back-home {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+
+  margin-bottom: 20px;
+}
+
+.back-home a {
+  display: inline-flex;
+  align-items: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-home a:hover {
+  color: #2563eb;
+
+  transform: translateX(-3px);
+}

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.feature-section {
+    width: 100%;
+    padding: 100px 8%;
+    background: #f8fbff;
+}
+
+.feature-container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* =========================
+   Header
+========================= */
+
+.feature-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.feature-header span {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #dbeafe;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.feature-header h2 {
+    font-size: 46px;
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+.feature-header p {
+    max-width: 720px;
+    margin: auto;
+    color: #64748b;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+/* =========================
+   Feature Grid
+========================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* =========================
+   Feature Card
+========================= */
+
+.feature-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+    transition: all .35s ease;
+    border-top: 5px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-top-color: #2563eb;
+    box-shadow: 0 18px 45px rgba(37, 99, 235, 0.18);
+}
+
+/* =========================
+   Icon
+========================= */
+
+.feature-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 25px;
+    transition: .35s;
+}
+
+.feature-card:hover .feature-icon {
+    transform: rotate(-10deg) scale(1.08);
+}
+
+/* =========================
+   Text
+========================= */
+
+.feature-card h3 {
+    font-size: 24px;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 992px) {
+
+    .feature-section {
+        padding: 80px 6%;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature-header h2 {
+        font-size: 38px;
+    }
+
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+
+    .feature-section {
+        padding: 70px 5%;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-header h2 {
+        font-size: 30px;
+    }
+
+    .feature-header p {
+        font-size: 16px;
+    }
+
+    .feature-card {
+        padding: 28px 22px;
+    }
+
+    .feature-icon {
+        width: 65px;
+        height: 65px;
+        font-size: 26px;
+    }
+
+    .feature-card h3 {
+        font-size: 22px;
+    }
+
+}

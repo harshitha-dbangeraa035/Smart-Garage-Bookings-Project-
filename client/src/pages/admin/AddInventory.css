@@ -1,0 +1,288 @@
+/* =================================
+   Add Inventory
+================================= */
+
+.add-inventory-page {
+  min-height: 100vh;
+  padding: 40px;
+
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.add-inventory-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* =================================
+   Back Button
+================================= */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+  padding: 9px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.back-btn svg {
+  font-size: 12px;
+}
+
+.back-btn:hover {
+  color: #2563eb;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* =================================
+   Form Card
+================================= */
+
+.inventory-form-card {
+  padding: 32px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+/* =================================
+   Icon
+================================= */
+
+.inventory-form-icon {
+  width: 50px;
+  height: 50px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  border-radius: 10px;
+
+  font-size: 21px;
+}
+
+/* =================================
+   Header
+================================= */
+
+.inventory-form-header {
+  margin-bottom: 28px;
+}
+
+.inventory-form-header h1 {
+  margin: 0 0 7px;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+.inventory-form-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =================================
+   Form
+================================= */
+
+.inventory-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =================================
+   Form Group
+================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+
+  color: #334155;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+
+  color: #0f172a;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Remove number arrows */
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+}
+
+/* =================================
+   Form Row
+================================= */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* =================================
+   Actions
+================================= */
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 8px;
+}
+
+.add-btn,
+.cancel-btn {
+  flex: 1;
+
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+/* Add */
+
+.add-btn {
+  border: none;
+
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.add-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Cancel */
+
+.cancel-btn {
+  border: 1px solid #e2e8f0;
+
+  background: #ffffff;
+  color: #475569;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* Disabled */
+
+.add-btn:disabled,
+.cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =================================
+   Mobile
+================================= */
+
+@media (max-width: 600px) {
+  .add-inventory-page {
+    padding: 25px 16px;
+  }
+
+  .inventory-form-card {
+    padding: 24px 20px;
+  }
+
+  .inventory-form-header h1 {
+    font-size: 23px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+

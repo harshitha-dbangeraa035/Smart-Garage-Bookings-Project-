@@ -1,0 +1,222 @@
+/* --- Global Scrollbar & Smooth Scrolling --- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar - WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Scrollbar - Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+/* --- Container (Scrollable Full Screen) --- */
+.dashboard-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto; /* Enables vertical scrolling when content exceeds screen height */
+  overflow-x: hidden; /* Prevents horizontal scrollbars */
+  background-color: #f4f6f9;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  padding: 30px 40px;
+  box-sizing: border-box;
+}
+
+/* --- Top Navigation Bar --- */
+.dashboard-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-back {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.btn-back:hover {
+  background-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.btn-logout {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.btn-logout:hover {
+  background-color: #fca5a5;
+  color: #991b1b;
+}
+
+/* --- Main Section --- */
+.dashboard-main {
+  width: 100%;
+  padding-bottom: 40px; /* Buffer space at the bottom for comfortable scrolling */
+}
+
+.dashboard-header {
+  margin-bottom: 32px;
+}
+
+.dashboard-header h1 {
+  font-size: 32px;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.dashboard-header p {
+  font-size: 16px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* --- Full Screen Card Grid --- */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* --- Dashboard Cards --- */
+.dashboard-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Icons --- */
+.card-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.icon-vehicle {
+  background-color: #e0e7ff;
+  color: #4338ca;
+}
+
+.icon-booking {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.icon-payment {
+  background-color: #fef9c3;
+  color: #a16207;
+}
+
+.icon-review {
+  background-color: #fae8ff;
+  color: #a21caf;
+}
+
+/* --- Card Body --- */
+.card-body {
+  flex-grow: 1;
+}
+
+.card-body h2 {
+  font-size: 20px;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.card-body p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+}
+
+/* --- Module Link Buttons --- */
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #2563eb;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-icon {
+  transition: transform 0.2s ease;
+}
+
+.card-btn:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.card-btn:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    padding: 20px 16px;
+  }
+}

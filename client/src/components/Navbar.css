@@ -1,0 +1,173 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    border-bottom:1px solid #e2e8f0;
+    z-index:1000;
+}
+
+.navbar-container{
+    max-width:1250px;
+    height:80px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+}
+
+/* Logo */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+}
+
+.logo-icon{
+    width:52px;
+    height:52px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    position:relative;
+    right:6cm;
+}
+
+.logo-text{
+    position:relative;
+    right:6cm;
+}
+
+.nav-links{
+    position:relative;
+    left:11cm;
+}
+.logo-text h2{
+    color:#1e293b;
+    font-size:26px;
+    margin-bottom:3px;
+}
+
+.logo-text span{
+    font-size:13px;
+    color:#64748b;
+}
+
+/* Menu */
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#334155;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+/* Buttons */
+
+.nav-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.login-btn{
+    padding:10px 22px;
+    border:2px solid #2563eb;
+    color:#2563eb;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#eff6ff;
+}
+
+.register-btn{
+    padding:10px 22px;
+    background:#2563eb;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+.nav-links{
+    display:none;
+}
+
+.navbar-container{
+    padding:0 20px;
+}
+
+.logo-text h2{
+    font-size:22px;
+}
+
+.logo-text span{
+    display:none;
+}
+
+.login-btn,
+.register-btn{
+    padding:9px 16px;
+}
+
+}
+
+@media(max-width:600px){
+
+.logo-text h2{
+    font-size:20px;
+}
+
+.logo-icon{
+    width:45px;
+    height:45px;
+    font-size:20px;
+}
+
+.nav-buttons{
+    gap:10px;
+}
+
+.login-btn,
+.register-btn{
+    padding:8px 14px;
+    font-size:14px;
+}
+
+}

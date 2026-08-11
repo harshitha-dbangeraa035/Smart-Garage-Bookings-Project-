@@ -1,0 +1,302 @@
+/* --- CSS Design Tokens --- */
+:root {
+  --bg-main: #f4f6f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --text-label: #334155;
+  --border-color: #e2e8f0;
+  --input-border: #cbd5e1;
+  --primary-blue: #2563eb;
+  --primary-blue-hover: #1d4ed8;
+  --badge-bg: #e0e7ff;
+  --badge-color: #4338ca;
+  --danger-color: #dc2626;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Global Reset & Box Sizing --- */
+* {
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+/* --- Global Scrollbar & Smooth Scroll --- */
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 20px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* --- Outer Wrapper & Centering --- */
+.form-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* --- Top Navigation Bar --- */
+.form-topbar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+}
+
+/* --- Form Card --- */
+.form-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 40px 48px;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+/* --- Header Section (CENTERED IN MIDDLE) --- */
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.header-icon-badge {
+  width: 64px;
+  height: 64px;
+  background-color: var(--badge-bg);
+  color: var(--badge-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.header-text h1 {
+  font-size: 26px;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin: 0 0 6px 0;
+}
+
+.header-text p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* --- Form Elements --- */
+.vehicle-form {
+  width: 100%;
+}
+
+.form-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-fieldset:disabled {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Keeps labels cleanly aligned to inputs */
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-label);
+  margin-bottom: 8px;
+}
+
+.form-group label .required {
+  color: var(--danger-color);
+  margin-left: 2px;
+}
+
+/* Input & Select Styling */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 15px;
+  color: var(--text-primary);
+  background-color: var(--bg-card);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+  border-color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* --- Form Actions (CENTERED IN MIDDLE) --- */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  min-width: 140px;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: var(--text-label);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: #cbd5e1;
+  color: var(--text-primary);
+}
+
+.btn-cancel {
+  background-color: #f1f5f9;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-cancel:hover:not(.disabled) {
+  background-color: #e2e8f0;
+  color: var(--text-label);
+}
+
+.btn-cancel.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.btn-submit {
+  background-color: var(--primary-blue);
+  color: #ffffff;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: var(--primary-blue-hover);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-submit:disabled,
+.btn-secondary:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 768px) {
+  .form-wrapper {
+    padding: 20px 16px;
+  }
+
+  .form-card {
+    padding: 28px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+  }
+}
+.harshitha{
+    position:relative;
+    left:5cm;
+}

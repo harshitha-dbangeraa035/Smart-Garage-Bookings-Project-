@@ -1,0 +1,547 @@
+/* ========================================
+   Login Page
+======================================== */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(37, 99, 235, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(14, 165, 233, 0.15),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #f8fafc,
+      #eef2ff
+    );
+}
+
+
+/* ========================================
+   Login Card
+======================================== */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+
+  padding: 28px 40px 40px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid rgba(226, 232, 240, 0.8);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.10),
+    0 5px 15px rgba(15, 23, 42, 0.05);
+
+  animation: cardAppear 0.5s ease;
+}
+
+
+/* ========================================
+   Card Animation
+======================================== */
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ========================================
+   Back to Home
+======================================== */
+
+.back-home {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.back-home a {
+  display: inline-flex;
+  align-items: center;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-home a:hover {
+  color: #2563eb;
+
+  transform: translateX(-3px);
+}
+
+
+/* ========================================
+   Header
+======================================== */
+
+.login-header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.login-logo {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  box-shadow:
+    0 10px 25px rgba(37, 99, 235, 0.25);
+
+  animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.login-header h1 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.login-header p {
+  margin: 8px 0 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   Form
+======================================== */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   Input Box
+======================================== */
+
+.input-box {
+  width: 100%;
+
+  min-height: 50px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  box-sizing: border-box;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input-box:focus-within {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* ========================================
+   Input
+======================================== */
+
+.input-box input {
+  width: 100%;
+
+  height: 50px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #0f172a;
+
+  font-size: 14px;
+}
+
+.input-box input::placeholder {
+  color: #94a3b8;
+}
+
+
+/* ========================================
+   Password Box
+======================================== */
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 65px;
+}
+
+
+/* ========================================
+   Password Show / Hide
+======================================== */
+
+.password-toggle {
+  position: absolute;
+
+  right: 8px;
+
+  height: 34px;
+
+  padding: 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #2563eb;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.password-toggle:hover {
+  background: #eff6ff;
+
+  color: #1d4ed8;
+}
+
+
+/* ========================================
+   Forgot Password
+======================================== */
+
+.forgot-password {
+  display: flex;
+
+  justify-content: flex-end;
+
+  margin-top: -5px;
+
+  margin-bottom: 24px;
+}
+
+.forgot-password a {
+  color: #2563eb;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.forgot-password a:hover {
+  color: #1d4ed8;
+
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   Login Button
+======================================== */
+
+.login-btn {
+  width: 100%;
+
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(37, 99, 235, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 25px rgba(37, 99, 235, 0.30);
+}
+
+.login-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-btn:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.7;
+}
+
+
+/* ========================================
+   Loading Spinner
+======================================== */
+
+.spinner {
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid rgba(255, 255, 255, 0.4);
+
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ========================================
+   Register Text
+======================================== */
+
+.register-text {
+  margin-top: 26px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.register-text a {
+  margin-left: 5px;
+
+  color: #2563eb;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.register-text a:hover {
+  color: #1d4ed8;
+
+  text-decoration: underline;
+}
+
+
+/* ========================================
+   Responsive Design
+======================================== */
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 20px 15px;
+  }
+
+  .login-card {
+    padding: 25px 24px 32px;
+
+    border-radius: 20px;
+  }
+
+  .back-home {
+    margin-bottom: 18px;
+  }
+
+  .login-header {
+    margin-bottom: 26px;
+  }
+
+  .login-logo {
+    width: 64px;
+    height: 64px;
+
+    font-size: 30px;
+  }
+
+  .login-header h1 {
+    font-size: 24px;
+  }
+
+  .login-header p {
+    font-size: 13px;
+  }
+
+  .input-box {
+    min-height: 48px;
+  }
+
+  .input-box input {
+    height: 48px;
+  }
+
+  .login-btn {
+    height: 50px;
+  }
+}
+
+
+/* ========================================
+   Small Mobile
+======================================== */
+
+@media (max-width: 360px) {
+  .login-card {
+    padding: 23px 18px 28px;
+  }
+
+  .login-header h1 {
+    font-size: 22px;
+  }
+
+  .login-header p {
+    font-size: 13px;
+  }
+
+  .back-home a {
+    font-size: 12px;
+  }
+}

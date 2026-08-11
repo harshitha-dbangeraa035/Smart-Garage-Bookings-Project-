@@ -1,0 +1,341 @@
+/* =================================
+   Manage Bookings
+================================= */
+
+.bookings-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.bookings-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =================================
+   Header
+================================= */
+
+.bookings-header {
+  margin-bottom: 30px;
+}
+
+.bookings-header h1 {
+  margin: 0 0 7px;
+
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.bookings-header p {
+  margin: 0;
+
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* =================================
+   Back Button
+================================= */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 24px;
+  padding: 9px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.back-btn svg {
+  font-size: 12px;
+}
+
+.back-btn:hover {
+  color: #2563eb;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* =================================
+   Table Wrapper
+================================= */
+
+.bookings-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* =================================
+   Table
+================================= */
+
+.bookings-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+.bookings-table thead {
+  background: #0f172a;
+}
+
+.bookings-table th {
+  padding: 15px 18px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.bookings-table td {
+  padding: 16px 18px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.bookings-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.bookings-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.bookings-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =================================
+   Customer
+================================= */
+
+.customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.table-icon {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 13px;
+}
+
+/* =================================
+   Vehicle
+================================= */
+
+.vehicle-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 500;
+}
+
+.vehicle-cell svg {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =================================
+   Status
+================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: capitalize;
+
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* Pending */
+
+.status-badge.pending {
+  background: #fffbeb;
+  color: #92400e;
+}
+
+/* Completed */
+
+.status-badge.completed {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+/* Cancelled */
+
+.status-badge.cancelled {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+/* Confirmed */
+
+.status-badge.confirmed {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* =================================
+   Assign Button
+================================= */
+
+.assign-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 13px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.assign-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* =================================
+   No Bookings
+================================= */
+
+.no-bookings {
+  padding: 50px !important;
+
+  color: #64748b !important;
+
+  text-align: center;
+}
+
+/* =================================
+   Loading
+================================= */
+
+.bookings-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+}
+
+.bookings-loading p {
+  margin-top: 14px;
+
+  color: #64748b;
+  font-size: 14px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================
+   Tablet
+================================= */
+
+@media (max-width: 700px) {
+  .bookings-page {
+    padding: 25px 16px;
+  }
+
+  .bookings-header h1 {
+    font-size: 25px;
+  }
+
+  .bookings-header p {
+    font-size: 14px;
+  }
+
+  .bookings-table-wrapper {
+    border-radius: 10px;
+  }
+}

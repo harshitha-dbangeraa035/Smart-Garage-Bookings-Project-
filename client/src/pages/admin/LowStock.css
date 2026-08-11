@@ -1,0 +1,333 @@
+/* =================================
+   Low Stock
+================================= */
+
+.low-stock-page {
+  min-height: 100vh;
+  padding: 40px;
+
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.low-stock-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =================================
+   Header
+================================= */
+
+.low-stock-header {
+  margin-bottom: 30px;
+}
+
+/* =================================
+   Back Button
+================================= */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 20px;
+  padding: 9px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease;
+}
+
+.back-btn svg {
+  font-size: 12px;
+}
+
+.back-btn:hover {
+  color: #2563eb;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+/* =================================
+   Title
+================================= */
+
+.low-stock-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.low-stock-title-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fffbeb;
+  color: #d97706;
+
+  border-radius: 10px;
+
+  font-size: 20px;
+}
+
+.low-stock-title h1 {
+  margin: 0 0 5px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.low-stock-title p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+/* =================================
+   Table Wrapper
+================================= */
+
+.low-stock-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* =================================
+   Table
+================================= */
+
+.low-stock-table {
+  width: 100%;
+  min-width: 650px;
+
+  border-collapse: collapse;
+}
+
+.low-stock-table thead {
+  background: #0f172a;
+}
+
+.low-stock-table th {
+  padding: 15px 18px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.low-stock-table td {
+  padding: 16px 18px;
+
+  color: #334155;
+
+  font-size: 14px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.low-stock-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.low-stock-table tbody tr:hover {
+  background: #fffafa;
+}
+
+.low-stock-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =================================
+   Item
+================================= */
+
+.item-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #0f172a;
+
+  font-weight: 600;
+}
+
+.item-icon {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff7ed;
+  color: #ea580c;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+}
+
+/* =================================
+   Category
+================================= */
+
+.category-text {
+  color: #64748b;
+}
+
+/* =================================
+   Quantity
+================================= */
+
+.quantity-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 35px;
+
+  padding: 5px 9px;
+
+  background: #fef2f2;
+  color: #dc2626;
+
+  border: 1px solid #fecaca;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =================================
+   Price
+================================= */
+
+.price {
+  color: #0f172a;
+
+  font-weight: 600;
+}
+
+/* =================================
+   Empty State
+================================= */
+
+.no-low-stock {
+  height: 180px;
+
+  color: #64748b !important;
+
+  text-align: center;
+}
+
+.no-low-stock svg {
+  display: block;
+
+  margin: 0 auto 10px;
+
+  color: #16a34a;
+
+  font-size: 25px;
+}
+
+.no-low-stock span {
+  display: block;
+
+  font-size: 14px;
+}
+
+/* =================================
+   Loading
+================================= */
+
+.low-stock-loading {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+}
+
+.low-stock-loading p {
+  margin-top: 14px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================
+   Mobile
+================================= */
+
+@media (max-width: 700px) {
+  .low-stock-page {
+    padding: 25px 16px;
+  }
+
+  .low-stock-title h1 {
+    font-size: 25px;
+  }
+
+  .low-stock-title p {
+    font-size: 13px;
+  }
+
+  .low-stock-table-wrapper {
+    border-radius: 10px;
+  }
+}
