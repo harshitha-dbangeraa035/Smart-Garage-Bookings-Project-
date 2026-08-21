@@ -45,7 +45,9 @@ Add inventory items
 Update inventory items
 Delete inventory items
 Monitor low-stock items
+
 👨‍🔧 Mechanic
+
 Mechanic authentication
 Mechanic dashboard
 View assigned bookings
@@ -55,9 +57,13 @@ Mark bookings as:
 Accepted
 In Progress
 Completed
+
 📧 Email
+
 Booking confirmation emails using Nodemailer
+
 🛠️ Technologies Used
+
 Frontend
 React.js
 Vite
