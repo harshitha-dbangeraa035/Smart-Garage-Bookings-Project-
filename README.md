@@ -1,43 +1,45 @@
 🚗 Smart Garage Booking System
 
-A full-stack MERN-based Smart Garage Booking System that allows customers to manage their vehicles, book garage services, make payments, submit reviews, while administrators manage bookings, mechanics, users, and inventory.
+A full-stack MERN-based Smart Garage Booking System for managing vehicles, garage services, bookings, payments, reviews, mechanics, and inventory.
 
 📌 About the Project
 
-The Smart Garage Booking System is designed to simplify vehicle servicing by providing an online platform for customers, administrators, and mechanics.
+The Smart Garage Booking System provides an online platform for customers, administrators, and mechanics.
 
-Customers can register their vehicles, book services, track bookings, make payments, download invoices, and submit reviews.
+Customers can manage their vehicles, book services, make payments, and submit reviews.
 
-Administrators can manage users, bookings, mechanics, inventory, and dashboard statistics.
+Administrators can manage bookings, users, mechanics, inventory, and statistics.
 
-Mechanics can view their assigned bookings and update the service status.
+Mechanics can view assigned bookings and update service status.
 
 ✨ Features
+
 👤 Customer
 User registration and login
-Secure authentication using JWT
-Manage profile
+Secure JWT authentication
+Manage vehicles
 Add vehicles
-View registered vehicles
-Update vehicle details
+Update vehicles
 Delete vehicles
 Create service bookings
 View booking history
 View booking details
-Cancel pending bookings
+Cancel bookings
 Make payments
 View payment history
 Download invoices
-Submit service reviews
-View customer reviews
+Submit reviews
+View reviews
+
 👨‍💼 Admin
+
 Admin authentication
 Admin dashboard
 View dashboard statistics
-View all customers
-View all mechanics
+Manage customers
+Manage mechanics
 View all bookings
-Assign mechanics to bookings
+Assign mechanics
 Manage inventory
 Add inventory items
 Update inventory items
@@ -47,14 +49,14 @@ Monitor low-stock items
 Mechanic authentication
 Mechanic dashboard
 View assigned bookings
-View customer and vehicle information
+View customer and vehicle details
 Update booking status
 Mark bookings as:
 Accepted
 In Progress
 Completed
 📧 Email
-Booking confirmation email using Nodemailer
+Booking confirmation emails using Nodemailer
 🛠️ Technologies Used
 Frontend
 React.js
@@ -74,7 +76,7 @@ bcrypt
 Nodemailer
 dotenv
 CORS
-Development Tools
+Tools
 Git
 GitHub
 VS Code
